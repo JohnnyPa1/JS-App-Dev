@@ -72,9 +72,10 @@ export const create = (user: User, callback: Function) => {
 
 // update user
 export const update = (user: User, callback: Function) => {
-  const queryString = `UPDATE jsusers SET nume=?, prenume=?,email=?, telefon=?, datanastere=? WHERE id=?`;
+  // let mydate = user.datanastere.toISOString().split('T')[0];
+  const queryString = `UPDATE jsusers SET nume=?, prenume=?,email=?, telefon=?, datanastere=?, poza=? WHERE id=?`;
 
-  db.query(queryString, [user.nume, user.prenume,user.email,user.telefon,user.datanastere, user.id], (err, result) => {
+  db.query(queryString, [user.nume, user.prenume,user.email,user.telefon,user.datanastere ,user.poza, user.id], (err, result) => {
     if (err) {
       callback(err);
     }

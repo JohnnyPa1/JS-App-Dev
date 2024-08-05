@@ -46,6 +46,17 @@
           />
         </div>
         <div class="form-group">
+          <label for="poza">Poza (URL)</label>
+          <input
+            class="form-control"
+            id="poza"
+            required
+            v-model="user.poza"
+            name="poza"
+            type="text"
+          />
+        </div>
+        <div class="form-group">
           <label for="datanastere">Data nastere</label>
           <input
             class="form-control"
@@ -87,6 +98,7 @@
           email: this.user.email,
           telefon: this.user.telefon,
           datanastere: this.user.datanastere,
+          poza: this.user.poza
         };
         UserService.create(data)
           .then((response) => {

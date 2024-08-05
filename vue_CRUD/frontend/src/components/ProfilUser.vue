@@ -32,7 +32,7 @@
         <div class="form-group">
           <label for="poza">Poza</label>
           <input
-            type="url"
+            type="text"
             class="form-control"
             id="poza"
             v-model="currentUser.poza"
